@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar  color="primary">
+    <ion-title>资料库</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="addProject()">
+        <ion-icon ios="ios-add" md="md-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item >
+      123
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!--<ion-content padding>
+  <calendar [eventSource]="eventSource"
+      [calendarMode]="calendar.mode"
+      [currentDate]="calendar.currentDate"
+      (onCurrentDateChanged)="onCurrentDateChanged($event)"
+      (onRangeChanged)="reloadSource(startTime, endTime)"
+      (onEventSelected)="onEventSelected($event)"
+      (onTitleChanged)="onViewTitleChanged($event)"
+      (onTimeSelected)="onTimeSelected($event)"
+      step="30">
+  </calendar>
+  <ion-list>
+    <ion-item>{{ area }}</ion-item>
+  </ion-list>
+</ion-content>-->

@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>业主筛选条件</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="submit" (click)="submit()">
+        提交
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>客户名称</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.customer_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>客户状态</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.customer_status"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>重要级别</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.important_level"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>地区</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.region"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>客户提供身份证明</ion-label>
+      <ion-checkbox item-right color="secondary" [(ngModel)]="paramObj.identity_prove"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger" (click)="reset()">
+    <ion-title>重新筛选条件</ion-title>
+  </ion-toolbar>
+</ion-footer>

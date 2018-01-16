@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-navbar color="primary" no-border-bottom>
+    <ion-title>编辑节点</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        提交
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id="editNode">
+  <ion-list>
+    <ion-item class="marginBot-10">
+      <ion-label class="taskName">执行人</ion-label>
+      <ion-select okText="确认" cancelText="取消">
+        <ion-option value="0">白玫瑰</ion-option>
+        <ion-option value="1">红玫瑰</ion-option>
+        <ion-option value="2">黄玫瑰</ion-option>
+        <!-- <ion-option *ngFor="let item of userInfo" value="{{item.id}}"> {{ item.username }}</ion-option> -->
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="taskName">节点名称</ion-label>
+      <ion-input type="text" placeholder="请输入" class="input-right"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="taskName">计划任务量</ion-label>
+      <ion-input type="number" item-right placeholder="请输入任务量"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="taskName">所需时长</ion-label>
+      <ion-input type="number" placeholder="请输入时长" class="input-right"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="taskName">时间类型</ion-label>
+      <ion-select okText="确认" cancelText="取消">
+        <ion-option value="MINUTE">分钟</ion-option>
+        <ion-option value="HOUR">时</ion-option>
+        <ion-option value="DAY">天</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="taskName">计划执行时间</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD HH:mm:ss" cancelText="取消" doneText="确认" max="2020-10-31"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label class="taskName">任务类型</ion-label>
+      <ion-select okText="确认" cancelText="取消">
+        <ion-option value="0">工程任务</ion-option>
+        <ion-option value="1">行政任务</ion-option>
+        <ion-option value="2">培训任务</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="noBBottom">
+      任务备注
+    </ion-item>
+    <ion-item>
+      <textarea placeholder="例如：任务紧急" class="expl"></textarea>
+    </ion-item>
+  </ion-list>
+</ion-content>

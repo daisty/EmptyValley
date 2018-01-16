@@ -1,0 +1,133 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title id="taskTration">社群联盟后台工作</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="progress">
+  <div class="progress-page">
+    <ion-list inset>
+      <ion-item class="title-linear">
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">部署服务器与给新员工讲解项目流程开发</p>
+        <div class="statuss" item-right>
+          <button ion-button color="taskColor" round>未分发</button>
+        </div>
+      </ion-item>
+      <ion-item>
+        <p class="list-any">
+          <span>任务类型</span>
+          <span>工程任务</span>
+        </p>
+        <p class="list-any">
+          <span>计划任务量</span>
+          <span>1</span>
+        </p>
+        <p class="list-any">
+          <span>所需时长</span>
+          <span>8(小时)</span>
+        </p>
+        <p class="list-any">
+          <span>计划执行时间</span>
+          <span>2017-08-19 18:20</span>
+        </p>
+        <p class="list-any">
+          <span>备注</span>
+          <span>工程经费公开</span>
+        </p>
+      </ion-item>
+      <ion-item class="three-btn">
+        <a class="same-btn" start (click)="showDele()">删除</a>
+        <a class="same-btn" (click)="goEdit()">编辑</a>
+        <a class="same-btn" (click)="goEdit()" end>发起任务</a>
+      </ion-item>
+    </ion-list>
+    <ion-list inset>
+      <ion-item class="title-linear">
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">部署服务器与给新员工讲解项目流程开发</p>
+        <div class="statuss" item-right>
+          <button ion-button color="taskColor" round>执行中</button>
+        </div>
+      </ion-item>
+      <ion-item>
+        <p class="list-any">
+          <span>任务类型</span>
+          <span>工程任务</span>
+        </p>
+        <p class="list-any">
+          <span>计划任务量</span>
+          <span>1</span>
+        </p>
+        <p class="list-any">
+          <span>所需时长</span>
+          <span>8(小时)</span>
+        </p>
+        <p class="list-any">
+          <span>计划执行时间</span>
+          <span>2017-08-19 18:20</span>
+        </p>
+        <p class="list-any">
+          <span>备注</span>
+          <span>工程经费公开</span>
+        </p>
+      </ion-item>
+    </ion-list>
+    <ion-list inset>
+      <ion-item class="title-linear">
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">部署服务器与给新员工讲解项目流程开发</p>
+        <div class="statuss" item-right>
+          <button ion-button color="taskColor" round>已完成</button>
+        </div>
+      </ion-item>
+      <ion-item>
+        <p class="list-any">
+          <span>任务类型</span>
+          <span>工程任务</span>
+        </p>
+        <p class="list-any">
+          <span>计划任务量</span>
+          <span>1</span>
+        </p>
+        <p class="list-any">
+          <span>所需时长</span>
+          <span>8(小时)</span>
+        </p>
+        <p class="list-any">
+          <span>计划执行时间</span>
+          <span>2017-08-19 18:20</span>
+        </p>
+        <p class="list-any">
+          <span>备注</span>
+          <span>工程经费公开</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event,pet)" threshold="200px" *ngIf='hideBtn'>
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+</ion-content>

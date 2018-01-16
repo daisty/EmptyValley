@@ -1,0 +1,75 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title id="taskTration">进度同步</ion-title>
+    <!-- <my-back text="首页" *ngIf="tab" (click)="closeModal()"></my-back> -->
+    <ion-buttons end>
+      <button ion-button icon-only class="search">
+        搜索
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="progress">
+  <div class="progress-page">
+    <ion-list (click)="goPlan()">
+      <ion-item>
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">2017-08-21</p>
+        <a class="statuss" item-right>不立项</a>
+      </ion-item>
+      <ion-item class="leave">
+        社群联盟项目大表
+      </ion-item>
+      <ion-item>
+        <p class="list-any">
+          <span>派工单号</span>：
+          <span>ike00908</span>
+        </p>
+        <p class="list-any">
+          <span class="two">地区</span>：
+          <span>广州项目组</span>
+        </p>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">2017-08-21</p>
+        <a class="statuss" item-right>立项</a>
+      </ion-item>
+      <ion-item class="leave">
+          社群联盟项目大表
+      </ion-item>
+      <ion-item>
+        <p class="list-any">
+          <span>派工单号</span>：
+          <span>ike00908</span>
+        </p>
+        <p class="list-any">
+          <span>地区</span>：
+          <span>廣州項目組</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event,pet)" threshold="200px" *ngIf='hideBtn'>
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

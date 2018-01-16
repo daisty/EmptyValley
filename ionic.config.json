@@ -1,0 +1,21 @@
+{
+  "name": "myApp",
+  "app_id": "43d8c7d3",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [{
+    "path": "/database",
+    "proxyUrl": "http://192.168.0.93:8080"
+  }, {
+    "path": "/user",
+    "proxyUrl": "http://192.168.0.58:51702"
+  }, {
+    "path": "/task",
+    "proxyUrl": "http://192.168.0.58:51508"
+  }, {
+    "path": "/progress",
+    "proxyUrl": "http://192.168.0.58:51508"
+  }]
+}

@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title id="taskTration">社群联盟项目大表</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="progress">
+
+    <ion-list inset (click)="goTaskNode()">
+      <ion-item class="title-linear">
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">2017-08-21</p>
+        <div class="statuss" item-right>
+          <button ion-button color="danger" round>执行中</button>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list inset>
+      <ion-item>
+        <ion-thumbnail class="avatar" item-start>
+          <img src="assets/imgs/usertitle.png">
+          <!-- <img src="{{imgsUrl + init.execute + '?userToken=' + userToken}}" alt="正在加载"> -->
+        </ion-thumbnail>
+        <h2>潘粵明
+          <span>研发部</span>
+        </h2>
+        <p class="task-time">2017-08-21</p>
+        <div class="statuss" item-right>
+          <button ion-button color="danger" round>执行中</button>
+        </div>
+        <!-- <a class="statuss" item-right>不立項</a> -->
+      </ion-item>
+    </ion-list>
+
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event,pet)" threshold="200px" *ngIf='hideBtn'>
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

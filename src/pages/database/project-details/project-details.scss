@@ -1,0 +1,12 @@
+page-project-details {
+  @include database;
+  .accessory {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    .img {
+      flex: 0 0 28%;
+      height: 100px;
+    }
+  }
+}

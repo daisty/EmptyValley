@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>需求市场</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="addProject()">
+        筛选
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <div>
+    <ion-segment [(ngModel)]="demand" (ionChange)="sysChanged()">
+      <ion-segment-button value="company">
+        企业需求
+      </ion-segment-button>
+      <ion-segment-button value="people">
+        业主需求
+      </ion-segment-button>
+      <ion-segment-button value="station">
+        站点需求
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+
+<ion-content (ionScroll)="onScroll()">
+  <div [ngSwitch]="demand">
+    <!-- 需求市场   企业需求 -->
+    <ion-list *ngSwitchCase="'company'">
+      <ion-item no-lines *ngFor="let item of companyList">
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/lgLogo.png">
+        </ion-thumbnail>
+        <div class="i_item">
+          <h2>联通公司</h2>
+          <span class="tel">联系方式：
+            <i>13893483640</i>
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+    <!-- 需求市场   企业需求 -->
+
+    <!-- 需求市场  业主需求 -->
+    <ion-list *ngSwitchCase="'people'">
+      <ion-item no-lines *ngFor="let item of peopleList">
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/lgLogo.png">
+        </ion-thumbnail>
+        <div class="i_item">
+          <h2>联通公司</h2>
+          <span class="tel">联系方式：
+            <i>13893483640</i>
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+    <!-- 需求市场  业主需求 -->
+
+    <!-- 需求市场  站点需求 -->
+    <ion-list *ngSwitchCase="'station'">
+      <ion-item no-lines *ngFor="let item of stationList">
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/lgLogo.png">
+        </ion-thumbnail>
+        <div class="i_item">
+          <h2>联通公司</h2>
+          <span class="tel">联系方式：
+            <i>13893483640</i>
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+    <!-- 需求市场  站点需求 -->
+
+  </div>
+
+  <div class="modal" [class.show]="showModal">
+    {{index}}
+  </div>
+
+  <ion-fab right bottom id="fab_parent">
+    <button ion-fab color="light">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab class="one">发布
+        <br>企业需求</button>
+      <button ion-fab class="two">发布
+        <br>业主需求</button>
+      <button ion-fab class="three">发布
+        <br>站点需求</button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

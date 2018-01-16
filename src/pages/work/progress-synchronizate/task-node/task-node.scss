@@ -1,0 +1,102 @@
+page-task-node {
+  a {
+    text-decoration: none;
+    color: #999;
+  }
+
+  #taskTration {
+    &.title-md {
+      // margin-left: 6rem;
+    }
+  }
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0;
+  }
+  #progress {
+    position: relative;
+    background-color: #f4f4f4;
+    .progress-page {
+      .title-linear{
+        border-bottom: 0;
+        background: -webkit-linear-gradient(left, #56defc, #4dcff5, #3eb9eb, #33a9e4);
+        // background: -o-linear-gradient(left, #56defc, #4dcff5, #3eb9eb, #33a9e4);
+        // background: -moz-linear-gradient(left, #56defc, #4dcff5, #3eb9eb, #33a9e4);
+        // background: -ms-linear-gradient(left, #56defc, #4dcff5, #3eb9eb, #33a9e4);
+      }
+      .avatar {
+        border-radius: 50%;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      h2 {
+        font-size: 17px;
+        color: #fff;
+        span {
+          font-size: 14px;
+          padding-left: 5px;
+        }
+      }
+      .task-time {
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .statuss {
+        color: #ffad0e;
+        font-size: 13px;
+      }
+
+      .list-any {
+        line-height: 2;
+        font-size: 16px;
+        :first-child{
+          display: inline-block;
+          min-width: 9rem;
+          color: #999;
+        }
+
+        :last-child {
+          color: #333;
+        }
+      }
+      // 编辑删除按钮
+      .three-btn{
+        padding-left: 5px;
+        .label-ios, .label-md{
+          margin: 0;
+        }
+        .same-btn{
+          display: inline-block;
+          width: 32%;
+          line-height: 53px;
+          text-align: center;
+          border-right: 1px solid #c8c7cc;
+          &:first-child{
+            
+          }
+          &:last-child{
+            border-right: 0;
+          }
+        }
+      }
+    }
+    .list-ios,
+    .list-md {
+      margin: 15px;
+    }
+    .list-ios>.item-block:first-child,
+    .list-md>.item-block:first-child {
+      border-top: 0 none;
+    }
+    .list-ios>.item-block:last-child,
+    .list-md>.item-block:last-child {
+      border-bottom: 0 none;
+    }
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner {
+      border-bottom: 0;
+    }
+  }
+}

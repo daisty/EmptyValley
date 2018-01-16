@@ -1,0 +1,204 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>项目详情</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list class="fillInlist">
+    <ion-item class="sm-headline">
+      <ion-icon name="my-project" md="md-my-project" color="primary" class="sm-icon"></ion-icon>项目信息
+      <ion-icon name="ios-arrow-down" item-right *ngIf="!isShow" (click)="isShow=!isShow" class="arrow"></ion-icon>
+      <ion-icon name="ios-arrow-forward" item-right *ngIf="isShow" (click)="isShow=!isShow" class="arrow"></ion-icon>
+    </ion-item>
+    <ion-list *ngIf="!isShow">
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目名称</ion-label>
+        <span item-right>{{detailsList.project_name}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目类型</ion-label>
+        <span item-right>{{detailsList.project_type}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>业务类型</ion-label>
+        <span item-right>{{detailsList.business_type}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目收集时间</ion-label>
+        <span item-right>{{detailsList.project_collect_time}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目创建人</ion-label>
+        <span item-right>{{detailsList.founder}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>重要级别</ion-label>
+        <span item-right>{{detailsList.important_level}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>项目地区</ion-label>
+        <span item-right>{{detailsList.project_address}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>站点地址</ion-label>
+        <span item-right>{{detailsList.latitude_and_longitude}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>数据来源</ion-label>
+        <span item-right>{{detailsList.data_source}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>甲方公司</ion-label>
+        <span item-right>{{detailsList.party_a_company}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>中标单位名称</ion-label>
+        <span item-right>{{detailsList.bid_company}}</span>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <i>*</i>业主客户名称</ion-label>
+        <span item-right>{{detailsList.owner_customer}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  <ion-list class="fillInlist">
+    <ion-item class="sm-headline">
+      <ion-icon name="my-project" md="md-my-project" color="primary" class="sm-icon"></ion-icon>项目合同信息
+      <ion-icon name="ios-arrow-down" item-right *ngIf="!isShow1" (click)="isShow1=!isShow1" class="arrow"></ion-icon>
+      <ion-icon name="ios-arrow-forward" item-right *ngIf="isShow1" (click)="isShow1=!isShow1" class="arrow"></ion-icon>
+    </ion-item>
+    <ion-list *ngIf="!isShow1">
+      <ion-item>
+        <ion-label>
+          <i>*</i>甲方和中标单位的合同</ion-label>
+        <span item-right>{{detailsList.party_a_bid_contract}}</span>
+      </ion-item>
+      <div *ngIf="detailsList.party_a_bid_contract=='是'">
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同签订时间</ion-label>
+          <span item-right>{{detailsList.party_a_bid_contract_sign_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同开始时间</ion-label>
+          <span item-right>{{detailsList.party_a_bid_contract_start_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同结束时间</ion-label>
+          <span item-right>{{detailsList.party_a_bid_contract_end_time}}</span>
+        </ion-item>
+        <ion-item class="ownerCompactImg">
+          <i>*</i>上传合同附件
+          <div class="accessory">
+            <img class="img" src="{{prefix + detailsList.party_a_bid_contract_url}}" (click)="showBig(prefix + detailsList.party_a_bid_contract_url)">
+          </div>
+        </ion-item>
+      </div>
+
+      <ion-item>
+        <ion-label>
+          <i>*</i>业主的合同</ion-label>
+        <span item-right>{{detailsList.owner_contract}}</span>
+      </ion-item>
+      <div *ngIf="detailsList.owner_contract=='是'">
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同签订时间</ion-label>
+          <span item-right>{{detailsList.owner_contract_sign_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同开始时间</ion-label>
+          <span item-right>{{detailsList.owner_contract_start_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同结束时间</ion-label>
+          <span item-right>{{detailsList.owner_contract_end_time}}</span>
+        </ion-item>
+        <ion-item class="ownerCompactImg">
+          <i>*</i>上传合同附件
+          <div class="accessory">
+            <img class="img" src="{{prefix + detailsList.owner_contract_url}}" (click)="showBig(prefix + detailsList.owner_contract_url)">
+          </div>
+        </ion-item>
+      </div>
+
+      <ion-item>
+        <ion-label>
+          <i>*</i>与中标单位的合同</ion-label>
+        <span item-right>{{detailsList.bid_contract}}</span>
+      </ion-item>
+      <div *ngIf="detailsList.bid_contract=='是'">
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同签订时间</ion-label>
+          <span item-right>{{detailsList.bid_contract_sign_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同开始时间</ion-label>
+          <span item-right>{{detailsList.bid_contract_start_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同结束时间</ion-label>
+          <span item-right>{{detailsList.bid_contract_end_time}}</span>
+        </ion-item>
+        <ion-item class="ownerCompactImg">
+          <i>*</i>上传合同附件
+          <div class="accessory">
+            <img class="img" src="{{prefix + detailsList.bid_contract_url}}" (click)="showBig(prefix + detailsList.bid_contract_url)">
+          </div>
+        </ion-item>
+      </div>
+
+      <ion-item>
+        <ion-label>
+          <i>*</i>甲方与业主的合同</ion-label>
+        <span item-right>{{detailsList.party_a_owner_contract}}</span>
+      </ion-item>
+      <div *ngIf="detailsList.party_a_owner_contract=='是'">
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同签订时间</ion-label>
+          <span item-right>{{detailsList.party_a_owner_contract_sign_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同开始时间</ion-label>
+          <span item-right>{{detailsList.party_a_owner_contract_start_time}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <i>*</i>合同结束时间</ion-label>
+          <span item-right>{{detailsList.party_a_owner_contract_end_time}}</span>
+        </ion-item>
+        <ion-item class="ownerCompactImg">
+          <i>*</i>上传合同附件
+          <div class="accessory">
+            <img class="img" src="{{prefix + detailsList.party_a_owner_contract_url}}" (click)="showBig(prefix + detailsList.party_a_owner_contract_url)">
+          </div>
+        </ion-item>
+      </div>
+
+    </ion-list>
+  </ion-list>
+</ion-content>

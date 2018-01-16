@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>项目筛选条件</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="submit" (click)="submit()">
+        提交
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>项目名称</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.project_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>项目类型</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.project_type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>甲方公司</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.party_a_company"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>中标单位名称</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.bid_company"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>业主客户名称</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.owner_customer"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>与中标单位签订合同</ion-label>
+      <ion-checkbox item-right color="secondary" [(ngModel)]="paramObj.bid_contract"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>与业主签订合同</ion-label>
+      <ion-checkbox item-right color="secondary" [(ngModel)]="paramObj.owner_contract"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>甲方和业主签订合同</ion-label>
+      <ion-checkbox item-right color="secondary" [(ngModel)]="paramObj.party_a_owner_contract"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger" (click)="reset()">
+    <ion-title>重新筛选条件</ion-title>
+  </ion-toolbar>
+</ion-footer>

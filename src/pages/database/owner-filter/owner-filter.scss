@@ -1,0 +1,24 @@
+page-owner-filter {
+    .submit {
+        font-size: 16px;
+        color: #fffefe!important;
+      }
+      .item-ios.item-block {
+        border-bottom: 1px solid #f4f4f4;
+        padding-left: 14px;
+        font-size: 15px;
+        color: #333;
+        .item-inner {
+          border: 0;
+        }
+        &:last-child {
+          border: 0;
+        }
+        @include radioBtn;
+      }
+     
+      ion-footer {
+        font-size: 16px;
+        color: #fff;
+      }
+}

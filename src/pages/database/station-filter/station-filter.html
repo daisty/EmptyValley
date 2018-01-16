@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>站点筛选条件</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="submit" (click)="submit()">
+        提交
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>站点类型</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.site_type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>站点区域</ion-label>
+      <ion-input type="text" item-right [(ngModel)]="paramObj.site_region"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>已有联系人</ion-label>
+      <ion-checkbox item-right color="secondary" [(ngModel)]="paramObj.whether_contact"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="danger" (click)="reset()">
+    <ion-title>重新筛选条件</ion-title>
+  </ion-toolbar>
+</ion-footer>

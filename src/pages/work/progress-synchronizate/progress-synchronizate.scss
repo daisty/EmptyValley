@@ -1,0 +1,86 @@
+page-progress-synchronizate {
+  a {
+    text-decoration: none;
+    color: #999;
+  }
+
+  #taskTration {
+    &.title-md {
+      // margin-left: 6rem;
+    }
+  }
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0;
+  }
+  #progress {
+    position: relative;
+    background-color: #f4f4f4;
+    .progress-page {
+      margin-top: 5px;
+      .avatar {
+        border-radius: 50%;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      h2 {
+        font-size: 17px;
+        color: #333;
+        span {
+          color: #999;
+          font-size: 14px;
+          padding-left: 5px;
+        }
+      }
+      .task-time {
+        color: #999;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .statuss {
+        color: #ffad0e;
+        font-size: 13px;
+      }
+      .leave {
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 1.6rem;
+      }
+      .list-any {
+        // 
+        font-size: 16px;
+        :first-child{
+          
+          display: inline-block;
+          min-width: 7rem;
+          text-align: justify;
+          text-align-last: justify;
+          color: #999;
+        }
+        .two{
+          letter-spacing:-2em;
+        }
+
+        :last-child {
+          color: #333;
+      }
+      }
+    }
+    .list-ios,
+    .list-md {
+      margin: 20px 0 0;
+    }
+    .list-ios>.item-block:first-child,
+    .list-md>.item-block:first-child {
+      border-top: 0 none;
+    }
+    .list-ios>.item-block:last-child,
+    .list-md>.item-block:last-child {
+      border-bottom: 0 none;
+    }
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner {
+      border-bottom: 0;
+    }
+  }
+}
